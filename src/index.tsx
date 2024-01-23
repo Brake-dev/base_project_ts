@@ -1,25 +1,9 @@
-import React, { FC } from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
-import { AppContainer } from "react-hot-loader";
-import { ThemeProvider } from "@material-ui/core/styles";
-import theme from "./theme";
+import React from "react";
+import { createRoot } from "react-dom/client";
 
-const render = (Component: FC) => {
-  ReactDOM.render(
-    <ThemeProvider theme={theme}>
-      <AppContainer>
-        <Component />
-      </AppContainer>
-    </ThemeProvider>,
-    document.getElementById("app")
-  );
-};
+import App from "@/App";
 
-render(App);
+const container = document.getElementById("app");
+const root = createRoot(container!);
 
-if (module.hot) {
-  module.hot.accept("./App.tsx", () => {
-    render(App);
-  });
-}
+root.render(<App />);

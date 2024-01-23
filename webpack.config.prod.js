@@ -1,7 +1,7 @@
-const { merge } = require("webpack-merge");
-const baseConfig = require("./webpack.config");
+import { merge } from "webpack-merge";
+import baseConfig from "./webpack.config.js";
 
-module.exports = merge(baseConfig, {
+export default merge(baseConfig, {
   optimization: {
     minimize: true,
   },
@@ -9,5 +9,14 @@ module.exports = merge(baseConfig, {
   stats: {
     children: false,
     errorDetails: true,
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(ts|js)x?$/,
+        exclude: /node_modules/,
+        loader: "ts-loader",
+      },
+    ],
   },
 });

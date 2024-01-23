@@ -1,20 +1,18 @@
 import React from "react";
-import { Switch, Router } from "react-router";
+import { Routes, BrowserRouter } from "react-router-dom";
 import { Route } from "react-router-dom";
-import ScrollToTop from "./Components/ScrollToTop";
-import { TestView1, TestView2 } from "./Views";
-
-import { browserHistory } from "./utils";
+import ScrollToTop from "@/Components/ScrollToTop";
+import { TestView1, TestView2 } from "@/Views";
 
 const App = () => (
-  <Router history={browserHistory}>
+  <BrowserRouter>
     <ScrollToTop>
-      <Switch>
-        <Route exact path="/" render={(props) => <TestView1 {...props} />} />
-        <Route exact path="/2" render={(props) => <TestView2 {...props} />} />
-      </Switch>
+      <Routes>
+        <Route path="/" element={<TestView1 />} />
+        <Route path="/2" element={<TestView2 />} />
+      </Routes>
     </ScrollToTop>
-  </Router>
+  </BrowserRouter>
 );
 
 export default App;
