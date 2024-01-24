@@ -4,6 +4,8 @@ import { Route } from "react-router-dom";
 import ScrollToTop from "@/Components/ScrollToTop";
 import { TestView1, TestView2 } from "@/Views";
 
+import "./variables.module.less";
+
 const App = () => (
   <BrowserRouter>
     <ScrollToTop>
