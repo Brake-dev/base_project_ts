@@ -1,5 +1,5 @@
 import React, { useEffect, FC } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "react-router";
 
 const ScrollToTop: FC<{ children?: React.ReactNode }> = ({ children }) => {
   const location = useLocation();

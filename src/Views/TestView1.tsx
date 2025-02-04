@@ -1,7 +1,7 @@
 import React, { FC } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 
-import styles from "./TestView.module.less";
+import * as styles from "./TestView.module.less";
 
 const TestView1: FC = () => {
   const navigate = useNavigate();

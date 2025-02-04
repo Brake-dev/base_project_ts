@@ -3,7 +3,7 @@
     "target": "es5",
     "lib": ["es6", "dom"],
     "jsx": "react",
-    "module": "es2020",
+    "module": "esnext",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
@@ -18,10 +18,6 @@
     "paths": {
       "@/*": ["*"]
     }
-  },
-  "ts-node": {
-    "transpileOnly": true,
-    "esm": true
   },
   "includes": ["./externals.d.ts"]
 }

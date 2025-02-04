@@ -1,6 +1,5 @@
 import React from "react";
-import { Routes, BrowserRouter } from "react-router-dom";
-import { Route } from "react-router-dom";
+import { Routes, BrowserRouter, Route } from "react-router";
 import ScrollToTop from "@/Components/ScrollToTop";
 import { TestView1, TestView2 } from "@/Views";
 

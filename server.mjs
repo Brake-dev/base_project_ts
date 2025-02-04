@@ -14,8 +14,7 @@ app.get("*", (req, res) => {
   res.sendFile(`${staticPath}/index.html`);
 });
 
-// @ts-ignore
-createServer(app).listen(3000, "0.0.0.0", null, (err: Error) => {
+createServer(app).listen(3000, "0.0.0.0", null, (err) => {
   if (err) {
     console.log(err);
   }
