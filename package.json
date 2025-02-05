@@ -9,8 +9,9 @@
   "scripts": {
     "dev": "node devServer.mjs",
     "bundle": "webpack --config webpack.config.prod.js",
-    "release": "npm install && npm run bundle && npm start",
-    "start": "node server.mjs"
+    "release": "npm run clean && npm install && npm run bundle && npm start",
+    "start": "node server.mjs",
+    "clean": "rimraf dist"
   },
   "dependencies": {
     "classnames": "^2.5.1",

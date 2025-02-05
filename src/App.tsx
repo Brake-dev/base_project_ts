@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, BrowserRouter, Route } from "react-router";
-import ScrollToTop from "@/Components/ScrollToTop";
-import { TestView1, TestView2 } from "@/Views";
+import ScrollToTop from "@/components/ScrollToTop";
+import { TestView1, TestView2 } from "@/views";
 
 import "./variables.module.less";
 
